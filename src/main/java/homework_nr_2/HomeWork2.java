@@ -50,9 +50,8 @@ public class HomeWork2 {
                 System.out.println(i);
             }
         for (int y = 0; y < 9; y++) {
-            System.out.print(" ");
             for (int x = 0; x <= y; x++)
-                System.out.print("* ");
+                System.out.print("*");
             System.out.println();
         }
         float sum = 0;
