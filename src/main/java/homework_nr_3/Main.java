@@ -2,18 +2,15 @@ package homework_nr_3;
 
 public class Main {
     public static void main(String[] args) {
-        double radius = 3.0;
-        double celsius = 36.6;
-        double fahrenheit = 72.8;
-        Circle calculateCircle = new Circle();
-        TemperatureConverter converter = new TemperatureConverter();
+        Circle calculateCircle = new Circle(3.0);
+        TemperatureConverter converter = new TemperatureConverter(36.6, 72.8);
 
-        double circumArea = calculateCircle.calculateArea(radius);
-        double fromCelsius = converter.toFahrenheit(celsius);
-        double fromFahrenheit = converter.toCelsius(fahrenheit);
+        double circumArea = calculateCircle.calculateArea();
+        double fromCelsius = converter.toFahrenheit();
+        double fromFahrenheit = converter.toCelsius();
 
-        System.out.println("Площадь круга " + circumArea + " от радиуса " + radius );
-        System.out.println("Из Цельсия " + celsius + " в Фаренгейт: " + fromCelsius);
-        System.out.println("из Фаренгейта " +  fahrenheit + " в Цельсию: " + fromFahrenheit);
+        System.out.println("Площадь круга " + circumArea + " от радиуса " + calculateCircle.radius);
+        System.out.println("Из Цельсия " + converter.celsius + " в Фаренгейт: " + fromCelsius);
+        System.out.println("из Фаренгейта " +  converter.fahrenheit + " в Цельсию: " + fromFahrenheit);
     }
 }
