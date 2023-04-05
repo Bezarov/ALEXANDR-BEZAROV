@@ -43,17 +43,17 @@ public class JavaClock {
         return seconds;
     }
     public void setHours(int hours) {
-        if (hours < 24)
+        if (hours < 24 && hours > 0)
             this.hours = hours;
         else this.hours = hours / 24;
     }
     public void setMinuts(int minuts){
-        if (minuts < 60)
+        if (minuts < 60 && minuts > 0)
              this.minuts = minuts;
         else this.hours += minuts / 60;
     }
     public void setSeconds(int seconds){
-        if (seconds < 60)
+        if (seconds < 60 && seconds > 0)
              this.seconds = seconds;
         else this.minuts += seconds / 60;
     }
