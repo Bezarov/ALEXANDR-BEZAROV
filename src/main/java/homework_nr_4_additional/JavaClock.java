@@ -18,7 +18,7 @@ public class JavaClock {
         seconds = secondsSinceMidnight;
     }
     //Метод который собирает часы из секунд
-    public int setClock(int secondsSinceMidnight){
+    public void setClock(int secondsSinceMidnight){
         if (secondsSinceMidnight < 86400) {
             seconds = secondsSinceMidnight % 60;
             hours = secondsSinceMidnight / 60;
@@ -27,7 +27,7 @@ public class JavaClock {
             System.out.println("Сконвертировано из секунд " + secondsSinceMidnight + " в: "
                     + hours + ":" + minuts + ":" + seconds);
         }
-        return 1;
+        else System.out.println("Вы указали не валидное значение секунд:");
     }
     //Метод который разбирает время из часового представления в секунды
     public int unSetClock(JavaClock secondClock){
@@ -74,11 +74,7 @@ public class JavaClock {
         return unSetClock(secondClock) - unSetClock(firstClock);
     }
     public String toString() {
-        return "JavaClock{" +
-                "hours=" + hours +
-                ", minuts=" + minuts +
-                ", seconds=" + seconds +
-                '}';
+        return getHours() + ":" + getMinuts() + ":" + getSeconds();
     }
 
 }
