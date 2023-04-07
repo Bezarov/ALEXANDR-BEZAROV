@@ -5,8 +5,10 @@ class HomeWork5 {
         Seasons season = new Seasons(SeasonEnum.values());
         season.printAllSeasons();
 
-        WeekdayEnum weekenum = WeekdayEnum.SUNDAY;
-        System.out.println(WeekdayEnum.MONDAY.isWeekDay());
+        System.out.println(WeekdayEnum.FRIDAY.isWeekDay());
+        System.out.println(WeekdayEnum.FRIDAY.isHoliday());
+        System.out.println(WeekdayEnum.SATURDAY.isWeekDay());
+        System.out.println(WeekdayEnum.SATURDAY.isHoliday());
         boolean bool = Boolean.parseBoolean("true");
         System.out.println("From String to boolean: " + bool);
         byte byt = Byte.parseByte("120");
