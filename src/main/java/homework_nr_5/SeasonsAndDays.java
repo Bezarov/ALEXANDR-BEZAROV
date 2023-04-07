@@ -13,11 +13,12 @@ class Seasons {
     }
 }
 class Weekdays {
-    WeekdayEnum[] days;
+    WeekdayEnum[] day;
 
-    public Weekdays (WeekdayEnum[] days) {
-        this.days = days;
+    public Weekdays(WeekdayEnum[] day) {
+        this.day = day;
     }
+
     boolean isWeekDay(String day){
         int index = WeekdayEnum.valueOf(day).ordinal();
         if (index <= 4) {
@@ -30,5 +31,6 @@ class Weekdays {
             return true;
         } else return false;
     }
+
 }
 
