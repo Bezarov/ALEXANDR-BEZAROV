@@ -6,17 +6,19 @@ public class Elephant extends Erbivor implements Animalble {
     int teeth;
     int weight;
     String name;
-    AnimalColorEnum[] colorEnum;
-    String Color;
+    AnimalColorEnum color;
+//    String Color;
 
-    Elephant(String name, int legs, int teeth, int weight, int eyes, String Color) {
-        this.name = name;
-        this.legs = legs;
+
+    public Elephant(String name, int eyes, int legs, int teeth, int weight,  AnimalColorEnum color) {
         this.eyes = eyes;
+        this.legs = legs;
         this.teeth = teeth;
         this.weight = weight;
-        this.Color = Color;
+        this.name = name;
+        this.color = color;
     }
+
     @Override
     public void willBeAnimalEaten(Elephant input) {
         Animalble.super.willBeAnimalEaten(input);
@@ -37,9 +39,12 @@ public class Elephant extends Erbivor implements Animalble {
     }
     @Override
     public void animalColor(Elephant animal) {
-        if (AnimalColorEnum.valueOf(animal.Color).isColorScary(animal.Color))
-            System.out.println(animal.name + " color: " + animal.Color + " a bit scary");
+        if (animal.color.isColorScary())
+            System.out.println(animal.name + " color: " + animal.color + " a bit scary");
         else
-            System.out.println(animal.name + " color: " + animal.Color + " Not scary at all )");
+            System.out.println(animal.name + " color: " + animal.color + " Not scary at all )");
     }
 }
+
+
+ //       if (AnimalColorEnum.valueOf().isColorScary(animal.Color))

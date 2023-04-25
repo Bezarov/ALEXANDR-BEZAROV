@@ -6,10 +6,10 @@ public enum AnimalColorEnum {
     GREEN,
     BLUE;
 
-    public boolean isColorScary(String color) {
-        switch (color) {
-            case "RED":
-            case "BLACK":
+    public boolean isColorScary() {
+        switch (this) {
+            case RED:
+            case BLACK:
                 return true;
             default:
                 return false;
