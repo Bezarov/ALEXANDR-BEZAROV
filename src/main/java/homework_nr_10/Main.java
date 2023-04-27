@@ -31,11 +31,12 @@ public class Main {
         }
         getUnic(strings);
 
-        String[] englishAsAKey = new String[] {"Cat", "Dog", "Cow", "Bear", "Beer"};
-        String[] romanianAsAValue = new String[] {"Pisica", "Caine", "Vaca", "Ursulikэ", "Bere"};
         Map<String, String> engRom = new HashMap<>();
-        for(int index = 0; index != englishAsAKey.length; index++)
-            engRom.put(englishAsAKey[index], romanianAsAValue[index]);
+        engRom.put("Cat", "Pisica");
+        engRom.put("Dog", "Caine");
+        engRom.put("Cow", "Vaca");
+        engRom.put("Bear", "Ursulikэ");
+        engRom.put("Beer", "Bere");
         System.out.println(engRom);
 
         Deque<String> lifoString = new ArrayDeque<>();
