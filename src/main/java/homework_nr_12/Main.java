@@ -40,9 +40,7 @@ public class Main {
                 .filter(e -> e.canConductInterview && e.isPayedByHour)
                 .findFirst();
         if (canConductInterviewHoursPayed.isPresent())
-            System.out.println(canConductInterviewHoursPayed.get().getName());
-        else
-            System.out.println("Employee was not found!");
+            System.out.println(canConductInterviewHoursPayed.orElseThrow(() -> new RuntimeException("Employee was not found!")));
 
         employeeList.stream()
                 .map(e -> e.getSurname())
