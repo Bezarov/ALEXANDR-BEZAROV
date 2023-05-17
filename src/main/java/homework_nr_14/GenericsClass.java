@@ -4,7 +4,7 @@ import homework_nr_13.Numbers;
 
 import java.io.Serializable;
 
-public class GenericsClass<T, K, V> {
+public class GenericsClass<T extends Comparable<T>, V extends Animal & Serializable, K extends Numbers> {
     T t;
     V v;
     K k;
