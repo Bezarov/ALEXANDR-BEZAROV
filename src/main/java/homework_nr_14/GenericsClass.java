@@ -22,7 +22,7 @@ public class GenericsClass<T extends Comparable<T>, V extends Animal & Serializa
     public K getK() {
         return k;
     }
-    public static String getNamesOfClasses(T t, V v, K k){
+    public String getNamesOfClasses(T t, V v, K k){
         return t.getClass().getSimpleName() + v.getClass().getSimpleName() + k.getClass().getSimpleName();
     }
 }
