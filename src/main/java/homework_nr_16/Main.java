@@ -47,7 +47,9 @@ public class Main {
         Connection connection = DriverManager.getConnection(url, user, password);
         PreparedStatement state = connection.prepareStatement(insertUsers);
         for (int i = 0; i < 10; i++) {
-            String phone = "+37369" + String.valueOf(random.nextInt(100000));
+            String phone = "+37369" + String.valueOf(random.ints(100000, 999999)
+                    .findFirst()
+                    .getAsInt());
             state.setInt(1, i);
             state.setString(2, names[random.nextInt(names.length)]);
             state.setString(3, surnames[random.nextInt(surnames.length)]);
